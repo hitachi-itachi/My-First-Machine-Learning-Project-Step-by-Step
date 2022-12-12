@@ -42,3 +42,7 @@ print(dataset.groupby('class').size()) #group the dataset by group columns and t
 # box and whisker plots
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 pyplot.show()
+
+# histograms
+dataset.hist()
+pyplot.show()
