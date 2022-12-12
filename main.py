@@ -21,6 +21,19 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 ...
 # Load dataset
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = read_csv(url, names=names)
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv" #access the github data via github
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class'] #Define the names of the columns in Iris dataset
+dataset = read_csv(url, names=names) #passes url, names variable as argument to get stored in a variable "called dataset"
+
+#this are are all pandas function
+# shape
+print(dataset.shape) #Pandas lib function to check dimensions
+
+# looking at first 20 rows of the data
+print(dataset.head(20))
+
+# descriptions
+print(dataset.describe())
+
+# class distribution
+print(dataset.groupby('class').size()) #group the dataset by group columns and then find out the size of the column
