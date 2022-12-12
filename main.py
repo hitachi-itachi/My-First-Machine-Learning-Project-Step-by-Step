@@ -37,3 +37,8 @@ print(dataset.describe())
 
 # class distribution
 print(dataset.groupby('class').size()) #group the dataset by group columns and then find out the size of the column
+
+
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
